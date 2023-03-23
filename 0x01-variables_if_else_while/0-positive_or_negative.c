@@ -4,28 +4,29 @@
 
 /**
  * main - Entry point
- * Retun: Always 0 (correct)
+ * Return: Always 0 (Correct)
  */
 
 int main(void)
 {
-int n;
-srand(time(0);
-n =rand() - RAND_MAX / 2;
+	int n;
 
-if (n > 0)
-{
-printf("%i is zero\n", n);
-}
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-else if (n == 0)
-{
-printf("%i is zero\n", n);
-}
+	if (n > 0)
+	{
+		printf("%i is positive\n", n);
+	}
 
-else
-{
-printf("%i is negative\n", n);
-}
-return (0);
+	else if (n == 0)
+	{
+		printf("%i is zero\n", n);
+	}
+
+	else
+	{
+		printf("%i is negative\n", n);
+	}
+	return (0);
 }
