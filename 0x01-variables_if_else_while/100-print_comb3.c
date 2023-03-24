@@ -1,41 +1,34 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main -print three number combination
- *
- * return : 0 success
+ * main - Entry point
+ * Return: Always 0 (Success/completed)
  */
 
 int main(void)
-{
-	int i = '0';
-	int j = '0';
-	int k = '0';
 
-	while (i <= '7')
+{
+
+	int n, m;
+
+	for (n = 48; n <= 56; n++)
 	{
-		while (j <= '8')
+		for (m = 49; m <= 57; m++)
 		{
-			while (k <= '9')
+			if (m > n)
 			{
-				if (i < j && j < k)
+				putchar(n);
+				putchar(m);
+				if (n != 56 || m != 57)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (!(i == '7' && j == '8' && k == '9'))
-					{
-						putchar(',');
-						putchar(',');
-					}
+					putchar(',');
+					putchar(' ');
 				}
-				k++;
 			}
-			k = '0';
-			j++;
 		}
-		j = '0';
-		i++;
 	}
 	putchar('\n');
 	return (0);
+
 }
